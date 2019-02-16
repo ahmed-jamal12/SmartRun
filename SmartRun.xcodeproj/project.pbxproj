@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8ED9000F2119227C9BFCF667 /* Pods_SmartRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4D509C5BC6156A94AC4008 /* Pods_SmartRun.framework */; };
 		D36827EA221715BC00EC3866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36827E9221715BC00EC3866 /* AppDelegate.swift */; };
-		D36827EC221715BC00EC3866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36827EB221715BC00EC3866 /* ViewController.swift */; };
 		D36827EF221715BC00EC3866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36827ED221715BC00EC3866 /* Main.storyboard */; };
 		D36827F1221715BD00EC3866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36827F0221715BD00EC3866 /* Assets.xcassets */; };
 		D36827F4221715BD00EC3866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36827F2221715BD00EC3866 /* LaunchScreen.storyboard */; };
@@ -17,12 +16,13 @@
 		D3CF725C22171AC500507466 /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF725B22171AC500507466 /* loginController.swift */; };
 		D3CF725E22171AD900507466 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF725D22171AD900507466 /* SignUpController.swift */; };
 		D3CF726022171AEE00507466 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF725F22171AEE00507466 /* HomePage.swift */; };
-		D3CF726222171B0600507466 /* WeatherPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726122171B0600507466 /* WeatherPage.swift */; };
 		D3CF726422171B1A00507466 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726322171B1A00507466 /* SettingsPage.swift */; };
 		D3CF726622171B2E00507466 /* WeightsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726522171B2E00507466 /* WeightsPage.swift */; };
 		D3CF726822171B4700507466 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726722171B4700507466 /* Food.swift */; };
 		D3CF726B22171BC900507466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726A22171BC900507466 /* Constants.swift */; };
 		D3CF726D22171BE200507466 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726C22171BE200507466 /* Extensions.swift */; };
+		D3CF726F22173E4500507466 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726E22173E4500507466 /* WeatherTableViewController.swift */; };
+		D3CF727422185C4300507466 /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF727322185C4300507466 /* weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,6 @@
 		6B4D509C5BC6156A94AC4008 /* Pods_SmartRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36827E6221715BC00EC3866 /* SmartRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36827E9221715BC00EC3866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D36827EB221715BC00EC3866 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D36827EE221715BC00EC3866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D36827F0221715BD00EC3866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36827F3221715BD00EC3866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,12 +39,13 @@
 		D3CF725B22171AC500507466 /* loginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
 		D3CF725D22171AD900507466 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		D3CF725F22171AEE00507466 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
-		D3CF726122171B0600507466 /* WeatherPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPage.swift; sourceTree = "<group>"; };
 		D3CF726322171B1A00507466 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		D3CF726522171B2E00507466 /* WeightsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsPage.swift; sourceTree = "<group>"; };
 		D3CF726722171B4700507466 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		D3CF726A22171BC900507466 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3CF726C22171BE200507466 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D3CF726E22173E4500507466 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
+		D3CF727322185C4300507466 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +98,9 @@
 		D36827E8221715BC00EC3866 /* SmartRun */ = {
 			isa = PBXGroup;
 			children = (
+				D3CF727022185BD700507466 /* API */,
 				D3CF726922171BB900507466 /* Utils */,
 				D36827E9221715BC00EC3866 /* AppDelegate.swift */,
-				D36827EB221715BC00EC3866 /* ViewController.swift */,
 				D36827ED221715BC00EC3866 /* Main.storyboard */,
 				D36827F0221715BD00EC3866 /* Assets.xcassets */,
 				D36827F2221715BD00EC3866 /* LaunchScreen.storyboard */,
@@ -109,10 +109,10 @@
 				D3CF725B22171AC500507466 /* loginController.swift */,
 				D3CF725D22171AD900507466 /* SignUpController.swift */,
 				D3CF725F22171AEE00507466 /* HomePage.swift */,
-				D3CF726122171B0600507466 /* WeatherPage.swift */,
 				D3CF726322171B1A00507466 /* SettingsPage.swift */,
 				D3CF726522171B2E00507466 /* WeightsPage.swift */,
 				D3CF726722171B4700507466 /* Food.swift */,
+				D3CF726E22173E4500507466 /* WeatherTableViewController.swift */,
 			);
 			path = SmartRun;
 			sourceTree = "<group>";
@@ -124,6 +124,14 @@
 				D3CF726C22171BE200507466 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D3CF727022185BD700507466 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D3CF727322185C4300507466 /* weather.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +224,7 @@
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -232,6 +241,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,17 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CF727422185C4300507466 /* weather.swift in Sources */,
 				D3CF726022171AEE00507466 /* HomePage.swift in Sources */,
 				D3CF725C22171AC500507466 /* loginController.swift in Sources */,
-				D36827EC221715BC00EC3866 /* ViewController.swift in Sources */,
 				D36827EA221715BC00EC3866 /* AppDelegate.swift in Sources */,
 				D3CF726622171B2E00507466 /* WeightsPage.swift in Sources */,
+				D3CF726F22173E4500507466 /* WeatherTableViewController.swift in Sources */,
 				D3CF726B22171BC900507466 /* Constants.swift in Sources */,
 				D3CF726822171B4700507466 /* Food.swift in Sources */,
 				D3CF725E22171AD900507466 /* SignUpController.swift in Sources */,
 				D3CF726422171B1A00507466 /* SettingsPage.swift in Sources */,
 				D3CF726D22171BE200507466 /* Extensions.swift in Sources */,
-				D3CF726222171B0600507466 /* WeatherPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

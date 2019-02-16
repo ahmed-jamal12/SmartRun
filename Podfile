@@ -13,6 +13,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'lottie-ios'
 
 
 end

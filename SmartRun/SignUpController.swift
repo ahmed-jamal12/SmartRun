@@ -100,17 +100,7 @@ class SignUpController: UIViewController {
             })
         }
     }
-    
-    
-    
-   
-    
-    // MARK: - API
-    
-    
-    
-   
-    
+
     // MARK: - Helper Functions
     
     func configureViewComponents() {
