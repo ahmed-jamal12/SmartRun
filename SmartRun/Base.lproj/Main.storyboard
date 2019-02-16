@@ -157,14 +157,241 @@
                     <view key="view" contentMode="scaleToFill" id="J6D-4L-ZV7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqc-zh-pYs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGl-c0-NbS">
+                                <rect key="frame" x="43" y="389" width="45" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TIME">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="DINAlternate-Bold"/>
+                                            <font key="NSOriginalFont" size="13" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlB-qs-wXc" userLabel="clock">
+                                <rect key="frame" x="16" y="399" width="98" height="53"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0:00:00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odV-zy-X9g">
+                                <rect key="frame" x="276" y="389" width="56" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SPEED">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agH-lJ-yuT" userLabel="Velocity">
+                                <rect key="frame" x="240" y="400" width="129" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0.0 km/h">
+                                        <attributes>
+                                            <font key="NSFont" size="31" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-G1-pIC">
+                                <rect key="frame" x="26" y="470" width="78" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="DISTANCE">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tf-dD-6IJ">
+                                <rect key="frame" x="265" y="470" width="78" height="16"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="AVG. SPEED">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKJ-3r-QB5" userLabel="DistanceKM">
+                                <rect key="frame" x="16" y="488" width="98" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0.0 km">
+                                        <attributes>
+                                            <font key="NSFont" size="31" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHI-dA-uNh" userLabel="AverageSpeed">
+                                <rect key="frame" x="276" y="488" width="45" height="46"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0.0">
+                                        <attributes>
+                                            <font key="NSFont" size="31" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-3m-Hp4">
+                                <rect key="frame" x="313" y="488" width="62" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="km">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name=".SFNSDisplay"/>
+                                            <font key="NSOriginalFont" size="30" name=".SFNSDisplay"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53v-CJ-wuC">
+                                <rect key="frame" x="329" y="520" width="35" height="4"/>
+                                <color key="backgroundColor" red="0.042904578149999997" green="0.037144869570000003" blue="0.1118342802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="-">
+                                        <attributes>
+                                            <font key="NSFont" size="41" name=".SFNSDisplay"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-db-DDC">
+                                <rect key="frame" x="315" y="520" width="62" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="h">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name=".SFNSDisplay"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29z-RY-pl7">
+                                <rect key="frame" x="151" y="470" width="70" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ALTITUDE">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SN-Or-U77" userLabel="AltitudeM">
+                                <rect key="frame" x="146" y="488" width="82" height="38"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0 m">
+                                        <attributes>
+                                            <font key="NSFont" size="31" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-Ck-5Fy" userLabel="PlayStop">
+                                <rect key="frame" x="88" y="547" width="61" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" image="GoButton">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="FRi-IG-VxS" eventType="touchUpInside" id="zSR-m5-obQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t41-mL-snr" userLabel="PlayStop">
+                                <rect key="frame" x="260" y="556" width="61" height="62"/>
+                                <state key="normal" image="reset">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="FRi-IG-VxS" eventType="touchUpInside" id="Jsr-Bg-sct"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gqc-zh-pYs" firstAttribute="top" secondItem="J6D-4L-ZV7" secondAttribute="top" id="0cb-dQ-11h"/>
+                            <constraint firstItem="EcV-4z-ikb" firstAttribute="bottom" secondItem="aG5-db-DDC" secondAttribute="bottom" constant="62" id="92O-OT-9Sv"/>
+                            <constraint firstItem="EcV-4z-ikb" firstAttribute="bottom" secondItem="53v-CJ-wuC" secondAttribute="bottom" constant="94" id="B1o-pq-CIx"/>
+                            <constraint firstItem="jNN-3m-Hp4" firstAttribute="leading" secondItem="0SN-Or-U77" secondAttribute="trailing" constant="85" id="D8t-3J-or1"/>
+                            <constraint firstItem="EcV-4z-ikb" firstAttribute="trailing" secondItem="53v-CJ-wuC" secondAttribute="trailing" constant="11" id="N55-ll-7u4"/>
+                            <constraint firstItem="aG5-db-DDC" firstAttribute="top" secondItem="1Tf-dD-6IJ" secondAttribute="bottom" constant="34" id="P6r-La-oQu"/>
+                            <constraint firstItem="EcV-4z-ikb" firstAttribute="bottom" secondItem="jNN-3m-Hp4" secondAttribute="bottom" constant="94" id="QZZ-98-R4e"/>
+                            <constraint firstItem="53v-CJ-wuC" firstAttribute="top" secondItem="1Tf-dD-6IJ" secondAttribute="bottom" constant="34" id="TUj-tQ-d2z"/>
+                            <constraint firstItem="jNN-3m-Hp4" firstAttribute="trailing" secondItem="EcV-4z-ikb" secondAttribute="trailing" id="Vto-We-Q3H"/>
+                            <constraint firstItem="jNN-3m-Hp4" firstAttribute="top" secondItem="1Tf-dD-6IJ" secondAttribute="bottom" constant="2" id="Ypc-Ax-vJg"/>
+                            <constraint firstAttribute="trailing" secondItem="Gqc-zh-pYs" secondAttribute="trailing" id="cdn-d0-f7M"/>
+                            <constraint firstAttribute="trailing" secondItem="aG5-db-DDC" secondAttribute="trailing" constant="-2" id="gHN-LG-IZa"/>
+                            <constraint firstAttribute="bottom" secondItem="Gqc-zh-pYs" secondAttribute="bottom" constant="293" id="jFD-79-Cc7"/>
+                            <constraint firstItem="Gqc-zh-pYs" firstAttribute="leading" secondItem="J6D-4L-ZV7" secondAttribute="leading" id="jaW-C6-aKh"/>
+                            <constraint firstItem="aG5-db-DDC" firstAttribute="leading" secondItem="t41-mL-snr" secondAttribute="trailing" constant="66" id="qSD-rL-sik"/>
+                            <constraint firstItem="53v-CJ-wuC" firstAttribute="leading" secondItem="JHI-dA-uNh" secondAttribute="trailing" constant="8" id="qWr-jU-zKX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EcV-4z-ikb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Go" image="dashboard" selectedImage="dashboard" id="KV5-fo-U01"/>
+                    <connections>
+                        <outlet property="PlayStop" destination="lP1-Ck-5Fy" id="GxA-Wz-znw"/>
+                        <outlet property="altitudeM" destination="0SN-Or-U77" id="hQb-3W-Or8"/>
+                        <outlet property="averageSpeed" destination="JHI-dA-uNh" id="fUW-Hk-n1r"/>
+                        <outlet property="clock" destination="WlB-qs-wXc" id="rPx-Q9-WjL"/>
+                        <outlet property="distanceKM" destination="JKJ-3r-QB5" id="GPO-gt-t7p"/>
+                        <outlet property="mapView" destination="Gqc-zh-pYs" id="lL9-Nj-7UX"/>
+                        <outlet property="velocity" destination="agH-lJ-yuT" id="E3e-az-eMy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92J-Vx-aYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4647" y="2002"/>
+            <point key="canvasLocation" x="-4647.1999999999998" y="2001.9490254872564"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Swl-Ti-X89">
@@ -244,7 +471,7 @@
         <!--Weather-->
         <scene sceneID="Qsz-9W-BgR">
             <objects>
-                <tableViewController id="1zn-5n-ZuU" customClass="WeatherTableViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="1zn-5n-ZuU" customClass="WeatherTableViewController" customModule="SmartRun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="W7G-nS-EAO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,12 +524,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GoButton" width="1024" height="1024"/>
         <image name="SignUp" width="200" height="45"/>
         <image name="bg_app" width="375" height="667"/>
         <image name="cloud" width="30" height="30"/>
         <image name="dashboard" width="30" height="30"/>
         <image name="login_button" width="200" height="44.666667938232422"/>
         <image name="order" width="30" height="30"/>
+        <image name="reset" width="181.89472961425781" height="181.89472961425781"/>
         <image name="restaurant" width="30" height="30"/>
         <image name="services" width="30" height="30"/>
         <image name="signout" width="22.5" height="22.5"/>

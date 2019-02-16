@@ -25,7 +25,7 @@
                                         <rect key="frame" x="29" y="28" width="317" height="338"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Launching SmartRun..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ef-mP-qVr">
-                                        <rect key="frame" x="29" y="391" width="317" height="30"/>
+                                        <rect key="frame" x="18" y="374" width="357" height="47"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="31"/>
@@ -35,13 +35,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="db9-nX-qGT" secondAttribute="trailing" constant="29" id="1bK-WK-bJ6"/>
-                                    <constraint firstAttribute="bottom" secondItem="3ef-mP-qVr" secondAttribute="bottom" constant="246" id="DGI-a9-9rQ"/>
-                                    <constraint firstItem="3ef-mP-qVr" firstAttribute="leading" secondItem="gnt-lO-11K" secondAttribute="leading" constant="29" id="MRU-Cp-b46"/>
-                                    <constraint firstItem="3ef-mP-qVr" firstAttribute="top" secondItem="db9-nX-qGT" secondAttribute="bottom" constant="25" id="P4b-kv-NzY"/>
-                                    <constraint firstAttribute="trailing" secondItem="3ef-mP-qVr" secondAttribute="trailing" constant="29" id="SZk-bG-y5T"/>
+                                    <constraint firstItem="3ef-mP-qVr" firstAttribute="leading" secondItem="gnt-lO-11K" secondAttribute="leading" constant="18" id="3D8-W8-mNN"/>
                                     <constraint firstItem="db9-nX-qGT" firstAttribute="top" secondItem="gnt-lO-11K" secondAttribute="top" constant="28" id="bMS-wX-eVz"/>
                                     <constraint firstAttribute="bottom" secondItem="db9-nX-qGT" secondAttribute="bottom" constant="301" id="g8w-mU-nWr"/>
+                                    <constraint firstAttribute="bottom" secondItem="3ef-mP-qVr" secondAttribute="bottom" constant="246" id="lSU-79-tes"/>
                                     <constraint firstItem="db9-nX-qGT" firstAttribute="leading" secondItem="gnt-lO-11K" secondAttribute="leading" constant="29" id="nYG-vN-AhX"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ef-mP-qVr" secondAttribute="trailing" id="nyG-Km-jwC"/>
+                                    <constraint firstItem="3ef-mP-qVr" firstAttribute="top" secondItem="db9-nX-qGT" secondAttribute="bottom" constant="8" id="qx4-SC-TXL"/>
                                 </constraints>
                             </view>
                         </subviews>

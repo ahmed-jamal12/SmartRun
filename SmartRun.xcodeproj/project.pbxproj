@@ -23,6 +23,7 @@
 		D3CF726D22171BE200507466 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726C22171BE200507466 /* Extensions.swift */; };
 		D3CF726F22173E4500507466 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726E22173E4500507466 /* WeatherTableViewController.swift */; };
 		D3CF727422185C4300507466 /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF727322185C4300507466 /* weather.swift */; };
+		D3CF727C2218833900507466 /* Speedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF727B2218833900507466 /* Speedometer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D3CF726C22171BE200507466 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3CF726E22173E4500507466 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
 		D3CF727322185C4300507466 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
+		D3CF727B2218833900507466 /* Speedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speedometer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				D3CF726522171B2E00507466 /* WeightsPage.swift */,
 				D3CF726722171B4700507466 /* Food.swift */,
 				D3CF726E22173E4500507466 /* WeatherTableViewController.swift */,
+				D3CF727B2218833900507466 /* Speedometer.swift */,
 			);
 			path = SmartRun;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				D3CF726B22171BC900507466 /* Constants.swift in Sources */,
 				D3CF726822171B4700507466 /* Food.swift in Sources */,
 				D3CF725E22171AD900507466 /* SignUpController.swift in Sources */,
+				D3CF727C2218833900507466 /* Speedometer.swift in Sources */,
 				D3CF726422171B1A00507466 /* SettingsPage.swift in Sources */,
 				D3CF726D22171BE200507466 /* Extensions.swift in Sources */,
 			);
