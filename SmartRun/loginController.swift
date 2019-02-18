@@ -50,6 +50,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewComponents()
+        self.HideKeyboard()
     }
     
     // MARK: - Selectors
@@ -69,7 +70,9 @@ class LoginController: UIViewController {
     // MARK: - Helper Functions
     
     func configureViewComponents() {
-        
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
+        tabBarController?.tabBar.isHidden = true
         
         view.addSubview(logoImageView)
         logoImageView.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 60, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 150, height: 150)
@@ -84,4 +87,9 @@ class LoginController: UIViewController {
         
         
     }
+    
+
+    
+    
+    
 }

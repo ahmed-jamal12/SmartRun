@@ -13,10 +13,10 @@ class SettingsPage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       self.HideKeyboard()
 
         // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func signOutButton(_ sender: Any) {
         let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .actionSheet)

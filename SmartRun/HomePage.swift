@@ -10,10 +10,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomePage: UIViewController {
+class HomePage: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
+    let regionInMeters: Double = 3000
     
     private var movement = false
-    private var gps = true
     private var altitude : CLLocationDistance!
     private var gainaltitude : CLLocationDistance = 0
     private var distance = 0.0
@@ -21,9 +23,8 @@ class HomePage: UIViewController {
     private var sumdif = 0.0
     private var speed: Double!
     private var avgspeed: Double = 0.0
-    private var slope: Double!
     private let distancefilter = 5.0
-    private var contador = 0
+    private var counter = 0
     private var startLocation: CLLocation?
     private var lastLocation:CLLocation?
     private var time: Int = 0
@@ -41,13 +42,13 @@ class HomePage: UIViewController {
     @IBOutlet weak var PlayStop: UIButton!
     
     @IBAction func play(_ sender: Any) {
-        if movement == false && gps == true{
+        if movement == false{
             movement = true
             //startTime = Date().timeIntervalSince1970
             timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTime)), userInfo: nil, repeats: true)
-            (sender as AnyObject).setImage(UIImage(named: "Stop.png"), for: .normal)
+            (sender as AnyObject).setImage(UIImage(named: "stopButton"), for: .normal)
         } else if movement == true{
-            (sender as AnyObject).setImage(UIImage(named: "Play.png"), for: .normal)
+            (sender as AnyObject).setImage(UIImage(named: "GoButton"), for: .normal)
             timer.invalidate()
             startLocation = nil
             velocity.text? = String(format: "%.1f", 0) + " km/h"
@@ -71,7 +72,6 @@ class HomePage: UIViewController {
         gainaltitude = 0
         avgspeed = 0
         time = -1
-        slope = 0
         startLocation = nil
         movement = false
         updateDisplay()
@@ -79,31 +79,14 @@ class HomePage: UIViewController {
     
     
     
-    let locationManager = CLLocationManager()
-    let regionInMeters: Double = 3000
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
-        
-        // For use when the app is open & in the background
-        locationManager.requestAlwaysAuthorization()
-        
-        // For use when the app is open
-        //locationManager.requestWhenInUseAuthorization()
-        
-        // If location services is enabled get the users location
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation // You can change the location accuary here.
-            locationManager.distanceFilter = 5.0
-            locationManager.allowsBackgroundLocationUpdates = true
-            locationManager.pausesLocationUpdatesAutomatically = false
-            //locationManager.activityType = .fitness
-            locationManager.startUpdatingLocation()
-            //locationManager.requestLocation()
-            
-        }
+        self.HideKeyboard()
+      
+       
     }
     
     
@@ -112,6 +95,7 @@ class HomePage: UIViewController {
     func setupLocationManager() {
        // locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
     }
     
     
@@ -159,15 +143,12 @@ class HomePage: UIViewController {
             break
         }
     }
-}
 
-
- extension HomePage: CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        if movement == true && gps == true {
+        if movement == true {
             
             speed = manager.location!.speed
             if speed < 0 {
@@ -182,7 +163,14 @@ class HomePage: UIViewController {
                 distanceKM.text? = String(format: "%.1f", distance) + " km"
                 startLocation = lastLocation
             }
- 
+            
+            if counter == 10 && (distance - firstdistance) != 0{
+                
+                
+                firstdistance = distance
+            }
+            
+            
             if time>0 {avgspeed = distance * 3600 / Double(time)}
             averageSpeed.text? = String(format: "%.1f", avgspeed)
         }
@@ -192,23 +180,22 @@ class HomePage: UIViewController {
                 altitude = locations.last?.altitude
             }
             let difal = (locations.last?.altitude)! - altitude
-            if contador < 10 {
-                contador += 1
+            if counter < 10 {
+                counter += 1
                 sumdif += difal
             }
             else{
                 if sumdif > 0 && movement == true {
                     gainaltitude += sumdif
-                    altitudeM.text? = String(format: "%.0f", gainaltitude) + " m"
+                    
                 }
-                contador = 0
+                counter = 0
                 sumdif = 0
             }
             
             altitude = locations.last?.altitude
             altitudeM.text? = String(format: "%.0f", altitude) + " m"
         }
-        
         guard let location = locations.last else { return }
         let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
@@ -218,6 +205,4 @@ class HomePage: UIViewController {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
-    
 }
-

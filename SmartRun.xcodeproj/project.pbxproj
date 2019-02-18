@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8ED9000F2119227C9BFCF667 /* Pods_SmartRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4D509C5BC6156A94AC4008 /* Pods_SmartRun.framework */; };
+		D30D927B221AE19800AAB550 /* BodyMassIndexCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D927A221AE19800AAB550 /* BodyMassIndexCalculator.swift */; };
 		D36827EA221715BC00EC3866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36827E9221715BC00EC3866 /* AppDelegate.swift */; };
 		D36827EF221715BC00EC3866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36827ED221715BC00EC3866 /* Main.storyboard */; };
 		D36827F1221715BD00EC3866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36827F0221715BD00EC3866 /* Assets.xcassets */; };
@@ -23,13 +24,13 @@
 		D3CF726D22171BE200507466 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726C22171BE200507466 /* Extensions.swift */; };
 		D3CF726F22173E4500507466 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF726E22173E4500507466 /* WeatherTableViewController.swift */; };
 		D3CF727422185C4300507466 /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF727322185C4300507466 /* weather.swift */; };
-		D3CF727C2218833900507466 /* Speedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF727B2218833900507466 /* Speedometer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A9B938F9112EED8847893AD /* Pods-SmartRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartRun/Pods-SmartRun.release.xcconfig"; sourceTree = "<group>"; };
 		38D79313D0D575436FF193D0 /* Pods-SmartRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartRun/Pods-SmartRun.debug.xcconfig"; sourceTree = "<group>"; };
 		6B4D509C5BC6156A94AC4008 /* Pods_SmartRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30D927A221AE19800AAB550 /* BodyMassIndexCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMassIndexCalculator.swift; sourceTree = "<group>"; };
 		D36827E6221715BC00EC3866 /* SmartRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36827E9221715BC00EC3866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36827EE221715BC00EC3866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		D3CF726C22171BE200507466 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3CF726E22173E4500507466 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
 		D3CF727322185C4300507466 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
-		D3CF727B2218833900507466 /* Speedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speedometer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 				D3CF726522171B2E00507466 /* WeightsPage.swift */,
 				D3CF726722171B4700507466 /* Food.swift */,
 				D3CF726E22173E4500507466 /* WeatherTableViewController.swift */,
-				D3CF727B2218833900507466 /* Speedometer.swift */,
+				D30D927A221AE19800AAB550 /* BodyMassIndexCalculator.swift */,
 			);
 			path = SmartRun;
 			sourceTree = "<group>";
@@ -309,12 +309,12 @@
 				D3CF726022171AEE00507466 /* HomePage.swift in Sources */,
 				D3CF725C22171AC500507466 /* loginController.swift in Sources */,
 				D36827EA221715BC00EC3866 /* AppDelegate.swift in Sources */,
+				D30D927B221AE19800AAB550 /* BodyMassIndexCalculator.swift in Sources */,
 				D3CF726622171B2E00507466 /* WeightsPage.swift in Sources */,
 				D3CF726F22173E4500507466 /* WeatherTableViewController.swift in Sources */,
 				D3CF726B22171BC900507466 /* Constants.swift in Sources */,
 				D3CF726822171B4700507466 /* Food.swift in Sources */,
 				D3CF725E22171AD900507466 /* SignUpController.swift in Sources */,
-				D3CF727C2218833900507466 /* Speedometer.swift in Sources */,
 				D3CF726422171B1A00507466 /* SettingsPage.swift in Sources */,
 				D3CF726D22171BE200507466 /* Extensions.swift in Sources */,
 			);

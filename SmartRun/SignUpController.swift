@@ -61,6 +61,7 @@ class SignUpController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewComponents()
+        self.HideKeyboard()
     }
     
     // MARK: - Selectors

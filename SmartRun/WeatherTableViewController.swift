@@ -17,7 +17,7 @@ class WeatherTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.HideKeyboard()
         searchBar.delegate = self
         
         updateWeatherForLocation(location: "London ")
