@@ -10,12 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomePage: UIViewController, CLLocationManagerDelegate {
+class HomePage: UIViewController {
     
-    let locationManager = CLLocationManager()
-    let regionInMeters: Double = 3000
-    
-    private var movement = false
+  /*  private var movement = false
+    private var gps = true
     private var altitude : CLLocationDistance!
     private var gainaltitude : CLLocationDistance = 0
     private var distance = 0.0
@@ -23,43 +21,53 @@ class HomePage: UIViewController, CLLocationManagerDelegate {
     private var sumdif = 0.0
     private var speed: Double!
     private var avgspeed: Double = 0.0
+    private var slope: Double!
     private let distancefilter = 5.0
-    private var counter = 0
+    private var contador = 0
     private var startLocation: CLLocation?
     private var lastLocation:CLLocation?
     private var time: Int = 0
     private var timer: Timer!
-    
+   */
     @IBOutlet weak var mapView: MKMapView!
     
+    let locationManager = CLLocationManager()
+    let regionInMeters: Double = 3000
+  /*
+    @IBOutlet weak var tiempo: UILabel!
     
-    @IBOutlet weak var clock: UILabel!
-    @IBOutlet weak var velocity: UILabel!
-    @IBOutlet weak var distanceKM: UILabel!
-    @IBOutlet weak var averageSpeed: UILabel!
-    @IBOutlet weak var altitudeM: UILabel!
+    @IBOutlet weak var velocidad: UILabel!
+    
+    @IBOutlet weak var distancia: UILabel!
+    @IBOutlet weak var pendiente: UILabel!
+    @IBOutlet weak var velocidadmedia: UILabel!
+    
+    @IBOutlet weak var altitudacum: UILabel!
+    @IBOutlet weak var altitud: UILabel!
+    
     
     @IBOutlet weak var PlayStop: UIButton!
-    
-    @IBAction func play(_ sender: Any) {
-        if movement == false{
+    @IBAction func play(_ sender: UIButton) {
+        if movement == false && gps == true{
             movement = true
             //startTime = Date().timeIntervalSince1970
             timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTime)), userInfo: nil, repeats: true)
-            (sender as AnyObject).setImage(UIImage(named: "stopButton"), for: .normal)
+            sender.setImage(UIImage(named: "Stop.png"), for: .normal)
         } else if movement == true{
-            (sender as AnyObject).setImage(UIImage(named: "GoButton"), for: .normal)
+            sender.setImage(UIImage(named: "Play.png"), for: .normal)
             timer.invalidate()
             startLocation = nil
-            velocity.text? = String(format: "%.1f", 0) + " km/h"
+            velocidad.text? = String(format: "%.1f", 0) + " km/h"
             movement = false
         }
     }
+    
     func updateDisplay(){
         self.updateTime()
-        distanceKM.text? = String(format: "%.1f", distance) + " km"
-       
-        velocity.text? = String(format: "%.1f", speed*3.6) + " km/h"
+        distancia.text? = String(format: "%.1f", distance) + " km"
+        altitudacum.text? = String(format: "%.0f", gainaltitude) + " m"
+        velocidadmedia.text? = String(format: "%.1f", avgspeed)
+        velocidad.text? = String(format: "%.1f", speed*3.6) + " km/h"
     }
     
     @IBAction func reset(_ sender: UIButton) {
@@ -72,30 +80,27 @@ class HomePage: UIViewController, CLLocationManagerDelegate {
         gainaltitude = 0
         avgspeed = 0
         time = -1
+        slope = 0
         startLocation = nil
         movement = false
         updateDisplay()
     }
-    
-    
-    
+    */
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
-        self.HideKeyboard()
-      
-       
+        configureView()
+    }
+    
+    private func configureView() {
     }
     
     
-    
-    
     func setupLocationManager() {
-       // locationManager.delegate = self
+        locationManager.delegate = self as! CLLocationManagerDelegate
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
     }
     
     
@@ -116,13 +121,6 @@ class HomePage: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    @objc func updateTime(){
-        time += 1
-        let hours = time / 3600
-        let minutes = (time % 3600) / 60
-        let seconds = time % 60
-        clock.text? = String(hours) + ":" + String(format: "%02d" ,minutes) + ":" + String(format: "%02d" ,seconds)
-    }
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
@@ -143,36 +141,34 @@ class HomePage: UIViewController, CLLocationManagerDelegate {
             break
         }
     }
-
-    
-    
+  /*
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        if movement == true {
+        if movement == true{
             
             speed = manager.location!.speed
             if speed < 0 {
                 speed = 0
             }
-            velocity.text? = String(format: "%.1f", speed*3.6) + " km/h"
+            velocidad.text? = String(format: "%.1f", speed*3.6) + " km/h"
             
             if startLocation == nil {
                 startLocation = locations.last
             }else if let lastLocation = locations.last{
                 distance += lastLocation.distance(from: startLocation!)/1000
-                distanceKM.text? = String(format: "%.1f", distance) + " km"
+                distancia.text? = String(format: "%.1f", distance) + " km"
                 startLocation = lastLocation
             }
             
-            if counter == 10 && (distance - firstdistance) != 0{
-                
-                
+            if contador == 10 && (distance - firstdistance) != 0{
+                slope = sumdif * 0.1 / (distance - firstdistance)
+                pendiente.text? = String(format: "%.1f", slope) + "%"
                 firstdistance = distance
             }
             
             
             if time>0 {avgspeed = distance * 3600 / Double(time)}
-            averageSpeed.text? = String(format: "%.1f", avgspeed)
+            velocidadmedia.text? = String(format: "%.1f", avgspeed)
         }
         
         if Double((locations.last?.verticalAccuracy)!) > 0.0 {
@@ -180,22 +176,38 @@ class HomePage: UIViewController, CLLocationManagerDelegate {
                 altitude = locations.last?.altitude
             }
             let difal = (locations.last?.altitude)! - altitude
-            if counter < 10 {
-                counter += 1
+            if contador < 10 {
+                contador += 1
                 sumdif += difal
             }
             else{
-                if sumdif > 0 && movement == true {
+                if sumdif > 0 && movimiento == true {
                     gainaltitude += sumdif
-                    
+                    altitudacum.text? = String(format: "%.0f", gainaltitude) + " m"
                 }
-                counter = 0
+                contador = 0
                 sumdif = 0
             }
             
             altitude = locations.last?.altitude
-            altitudeM.text? = String(format: "%.0f", altitude) + " m"
+            altitud.text? = String(format: "%.0f", altitude) + " m"
         }
+    }
+    
+    @objc func updateTime(){
+        time += 1
+        let hours = time / 3600
+        let minutes = (time % 3600) / 60
+        let seconds = time % 60
+        tiempo.text? = String(hours) + ":" + String(format: "%02d" ,minutes) + ":" + String(format: "%02d" ,seconds)
+    }
+ */
+}
+
+
+extension HomePage: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)

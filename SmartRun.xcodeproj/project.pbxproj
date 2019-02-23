@@ -13,6 +13,13 @@
 		D36827EF221715BC00EC3866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36827ED221715BC00EC3866 /* Main.storyboard */; };
 		D36827F1221715BD00EC3866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36827F0221715BD00EC3866 /* Assets.xcassets */; };
 		D36827F4221715BD00EC3866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36827F2221715BD00EC3866 /* LaunchScreen.storyboard */; };
+		D3A953A32221B98300E0EB26 /* DietChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953A22221B98300E0EB26 /* DietChoices.swift */; };
+		D3A953A52221BB8700E0EB26 /* VegetarianDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953A42221BB8700E0EB26 /* VegetarianDiet.swift */; };
+		D3A953A72221BB9A00E0EB26 /* Low-CarbDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953A62221BB9A00E0EB26 /* Low-CarbDiet.swift */; };
+		D3A953A92221BBA800E0EB26 /* Low-CalorieDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953A82221BBA800E0EB26 /* Low-CalorieDiet.swift */; };
+		D3A953AB2221BBB600E0EB26 /* Low-FatDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953AA2221BBB600E0EB26 /* Low-FatDiet.swift */; };
+		D3A953AD2221BBCC00E0EB26 /* VegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953AC2221BBCC00E0EB26 /* VegeViewController.swift */; };
+		D3A953AF2221BC2400E0EB26 /* VegeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A953AE2221BC2400E0EB26 /* VegeCollectionViewCell.swift */; };
 		D3CF725A2217167000507466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3CF72592217167000507466 /* GoogleService-Info.plist */; };
 		D3CF725C22171AC500507466 /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF725B22171AC500507466 /* loginController.swift */; };
 		D3CF725E22171AD900507466 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF725D22171AD900507466 /* SignUpController.swift */; };
@@ -37,6 +44,13 @@
 		D36827F0221715BD00EC3866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36827F3221715BD00EC3866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36827F5221715BD00EC3866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A953A22221B98300E0EB26 /* DietChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietChoices.swift; sourceTree = "<group>"; };
+		D3A953A42221BB8700E0EB26 /* VegetarianDiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetarianDiet.swift; sourceTree = "<group>"; };
+		D3A953A62221BB9A00E0EB26 /* Low-CarbDiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Low-CarbDiet.swift"; sourceTree = "<group>"; };
+		D3A953A82221BBA800E0EB26 /* Low-CalorieDiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Low-CalorieDiet.swift"; sourceTree = "<group>"; };
+		D3A953AA2221BBB600E0EB26 /* Low-FatDiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Low-FatDiet.swift"; sourceTree = "<group>"; };
+		D3A953AC2221BBCC00E0EB26 /* VegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegeViewController.swift; sourceTree = "<group>"; };
+		D3A953AE2221BC2400E0EB26 /* VegeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3CF72592217167000507466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3CF725B22171AC500507466 /* loginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
 		D3CF725D22171AD900507466 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -113,11 +127,58 @@
 				D3CF725F22171AEE00507466 /* HomePage.swift */,
 				D3CF726322171B1A00507466 /* SettingsPage.swift */,
 				D3CF726522171B2E00507466 /* WeightsPage.swift */,
-				D3CF726722171B4700507466 /* Food.swift */,
+				D3A953A12221B90300E0EB26 /* SelectFoodItem */,
 				D3CF726E22173E4500507466 /* WeatherTableViewController.swift */,
-				D30D927A221AE19800AAB550 /* BodyMassIndexCalculator.swift */,
 			);
 			path = SmartRun;
+			sourceTree = "<group>";
+		};
+		D3A953A12221B90300E0EB26 /* SelectFoodItem */ = {
+			isa = PBXGroup;
+			children = (
+				D3A953B32221BD4800E0EB26 /* New Group3 */,
+				D3A953B22221BD4600E0EB26 /* New Group2 */,
+				D3A953B12221BD4300E0EB26 /* New Group1 */,
+				D3A953B02221BD4100E0EB26 /* New Group */,
+				D3CF726722171B4700507466 /* Food.swift */,
+				D30D927A221AE19800AAB550 /* BodyMassIndexCalculator.swift */,
+				D3A953A22221B98300E0EB26 /* DietChoices.swift */,
+			);
+			path = SelectFoodItem;
+			sourceTree = "<group>";
+		};
+		D3A953B02221BD4100E0EB26 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				D3A953AA2221BBB600E0EB26 /* Low-FatDiet.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		D3A953B12221BD4300E0EB26 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				D3A953A82221BBA800E0EB26 /* Low-CalorieDiet.swift */,
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		D3A953B22221BD4600E0EB26 /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+				D3A953A62221BB9A00E0EB26 /* Low-CarbDiet.swift */,
+			);
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		D3A953B32221BD4800E0EB26 /* New Group3 */ = {
+			isa = PBXGroup;
+			children = (
+				D3A953A42221BB8700E0EB26 /* VegetarianDiet.swift */,
+				D3A953AC2221BBCC00E0EB26 /* VegeViewController.swift */,
+				D3A953AE2221BC2400E0EB26 /* VegeCollectionViewCell.swift */,
+			);
+			path = "New Group3";
 			sourceTree = "<group>";
 		};
 		D3CF726922171BB900507466 /* Utils */ = {
@@ -305,8 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A953A32221B98300E0EB26 /* DietChoices.swift in Sources */,
+				D3A953AB2221BBB600E0EB26 /* Low-FatDiet.swift in Sources */,
 				D3CF727422185C4300507466 /* weather.swift in Sources */,
 				D3CF726022171AEE00507466 /* HomePage.swift in Sources */,
+				D3A953A52221BB8700E0EB26 /* VegetarianDiet.swift in Sources */,
+				D3A953A92221BBA800E0EB26 /* Low-CalorieDiet.swift in Sources */,
 				D3CF725C22171AC500507466 /* loginController.swift in Sources */,
 				D36827EA221715BC00EC3866 /* AppDelegate.swift in Sources */,
 				D30D927B221AE19800AAB550 /* BodyMassIndexCalculator.swift in Sources */,
@@ -315,8 +380,11 @@
 				D3CF726B22171BC900507466 /* Constants.swift in Sources */,
 				D3CF726822171B4700507466 /* Food.swift in Sources */,
 				D3CF725E22171AD900507466 /* SignUpController.swift in Sources */,
+				D3A953A72221BB9A00E0EB26 /* Low-CarbDiet.swift in Sources */,
+				D3A953AD2221BBCC00E0EB26 /* VegeViewController.swift in Sources */,
 				D3CF726422171B1A00507466 /* SettingsPage.swift in Sources */,
 				D3CF726D22171BE200507466 /* Extensions.swift in Sources */,
+				D3A953AF2221BC2400E0EB26 /* VegeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
